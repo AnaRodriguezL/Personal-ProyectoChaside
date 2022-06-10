@@ -1,0 +1,52 @@
+.colorSocial {
+    color: #fff;
+    background: #0b8b47;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-family: fontawesome;
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    margin: 5px 5px;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-font-smoothing: antialiased;
+}
+
+.colorSocial:hover {
+    background: #bb2c2c;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* font awesome icons */
+.colorSocial:nth-of-type(1):before {
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: 20px;
+    content: "\f544";
+}
+.colorSocial:nth-of-type(2):before {
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: 20px;
+    content: "\f2fe";
+}
+.colorSocial:nth-of-type(3):before {
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: 20px;
+    content: "\f33b";
+}
+.colorSocial:nth-of-type(4):before {
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: 20px;
+    content: "\f20c";
+}
+.colorSocial:nth-of-type(5):before {
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: 20px;
+    content: "\f5a3";
+}

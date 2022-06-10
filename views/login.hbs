@@ -1,0 +1,303 @@
+{{!-- PAGE LOADER --}}
+<div id="loader" class="active">
+	<div class="loader18 d-flex align-items-center">Loading...</div>
+</div>
+
+{{!-- SECCIÓN LOGIN --}}
+<div class="limiter">
+	<div class="container-login" style="background: url('assets/img/login/fondo.png'); background-size: cover;">
+		<div class="wrap-login" style="background: rgba(255,255,255,0.9) !important;">
+
+			{{!-- FORMULARIO DE INGRESO --}}
+			<form id="formLogin" class="form-login">
+				<span class="login-form-title">
+
+					{{!-- LOGO --}}
+					<span>
+						<img src="assets/img/logoUcp/logoVerde.png" class="login-logo" alt="Logo">
+					</span><br />
+					<span class="logo_title">
+						Bienvenido
+					</span>
+				</span>
+
+				{{!-- INPUT CORREO ELECTRÓNICO --}}
+				<div class="group">
+					<div class="wrap-input validate-input">
+						<input id="inputEmail" class="input" type="text" placeholder="Correo electrónico">
+						<span class="focus-input"></span>
+						<span class="symbol-input">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+					</div>
+				</div>
+
+				{{!-- INPUT CONTRASEÑA --}}
+				<div class="group">
+					<div class="wrap-input">
+						<input id="inputContrasena" class="input" type="password" placeholder="Contraseña">
+						<span class="focus-input"></span>
+						<span class="symbol-input">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+				</div>
+
+				{{!-- BOTÓN INGRESAR --}}
+				<div class="container-login-form-btn">
+					<button id="btnIngresar" class="login-form-btn btn-loginA">
+						Ingresar
+					</button>
+				</div>
+
+				{{!-- BOTÓN ¿OLVIDÓ CONTRASEÑA? --}}
+				<div class="text-center p-t-12">
+					<a id="olvidarPass" class="txt2" href="#" data-toggle="modal" data-target="#modalOlvidoPass">
+						¿No recuerdas tu contraseña?
+					</a>
+				</div>
+
+				{{!-- BOTÓN REGISTRARSE--}}
+				<div class="container-login-form-btn">
+					<button type="button" class="btn-loginV" data-toggle="modal"
+						data-target="#modalCrearEstudiante">REGÍSTRATE</button>
+				</div>
+			</form>
+
+			{{!-- IMAGEN LOGIN --}}
+			<div class="login-pic">
+				<img src="assets/img/login/imagen.png" alt="IMG">
+			</div>
+		</div>
+	</div>
+</div>
+
+{{!----------------------------------------- MODAL OLVIDAR CONTRASEÑA ----------------------------------------}}
+<div class="modal modal-pass fade" id="modalOlvidoPass" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="false">
+	<div class="modal-dialog modal-pass" role="document">
+		<div class="modal-content">
+
+			{{!-- MODAL HEADER --}}
+			<div class="modal-header">
+				<h4 class="modal-title">¿Olvidó la contraseña?</h4>
+				<button type="button" class="close btnCerrarModalOlvidoPass" data-dismiss="modal">&times;</button>
+			</div>
+
+			{{!-- MODAL BODY --}}
+			<div class="modal-body">
+				<form id="formOlvidoPass">
+
+					{{!-- INPUT CORREO ELECTRÓNICO --}}
+					<div class="col-lg-12">
+						<div id="divInputEmail" class="form-group">
+							<label for="emailRecordarPass">Correo electrónico</label>
+							<input id="emailRecordarPass" type="text" class="form-control-input"
+								placeholder="nombre@correoelectronico.com">
+						</div>
+					</div>
+
+					{{!-- INPUT CONTRASEÑA --}}
+					<div class="col-lg-12">
+						<div id="divInputPass" class="form-group">
+							<label for="documetnoRecordarPass">Número de documento</label>
+							<input id="documetnoRecordarPass" type="text" class="form-control-input"
+								placeholder="Introduce tu documento">
+						</div>
+					</div>
+				</form>
+			</div>
+
+			{{!-- MODAL FOOTER --}}
+			<div class="modal-footer">
+				<button id="RecordarPass" type="submit" class="btn-enviar">Enviar nueva contraseña</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{!----------------------------------------- MODAL CAMBIAR CONTRASEÑA ----------------------------------------}}
+<div class="modal modal-pass fade" id="modalCambiarPass" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="false">
+	<div class="modal-dialog" role="document" style="width: 400px">
+		<div class="modal-content">
+
+			{{!-- MODAL HEADER --}}
+			<div class="modal-header">
+				<h4 class="modal-title">Cambiar contraseña</h4>
+				<button type="button" class="close btnCerrarModalCambiarPass" data-dismiss="modal">&times;</button>
+			</div>
+
+			{{!-- MODAL BODY --}}
+			<div class="modal-body">
+				<form id="formCambiarPass">
+
+					{{!-- INPUT CORREO ELECTRÓNICO --}}
+					<div class="col-lg-12">
+						<div id="divInputNuevaPass" class="form-group">
+							<label for="nuevaPass">Nueva contraseña(Entre 8 y 20 caracteres)</label>
+							<input id="nuevaPass" type="password" class="form-control-input"
+								placeholder="Nueva contraseña" maxlength="20">
+						</div>
+					</div>
+
+					{{!-- INPUT CONTRASEÑA --}}
+					<div class="col-lg-12">
+						<div id="divInputRepetirPass" class="form-group">
+							<label for="repetirNuevaPass">Repetir nueva contraseña</label>
+							<input id="repetirNuevaPass" type="password" class="form-control-input"
+								placeholder="Repite nueva contraseña" name="repetirNuevaPass" maxlength="20">
+						</div>
+					</div>
+				</form>
+			</div>
+
+			{{!-- MODAL FOOTER --}}
+			<div class="modal-footer">
+				<button id="cambiarPass" type="submit" class="btn-enviar">Continuar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{!--------------------------------------------- MODAL REGISTRO --------------------------------------------}}
+<div class="modal modal-register fade" id="modalCrearEstudiante" role="dialog">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+
+			{{!-- MODAL HEADER --}}
+			<div class="modal-header">
+				<h4 class="modal-title">Crear cuenta</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			{{!-- MODAL BODY --}}
+			<div class="modal-body">
+				<form id="formCrearEstudiante" class="mt-2">
+					<div class="row mt-2">
+						<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+
+							{{!-- SELECT TIPO DE DOCUMENTO --}}
+							<div class="form-group">
+								<label for="inputTipoDocumentoFormCrear">Tipo de documento</label>
+								<select class="form-control form-control-sm" data-live-search="true"
+									id="inputTipoDocumentoFormCrear" name="inputTipoDocumentoFormCrear">
+									<option selected value="">Seleccione una opción</option>
+								</select>
+							</div>
+
+							{{!-- INPUT NÚMERO DE DOCUMENTO --}}
+							<div class="form-group" id="divInputDocumento">
+								<label for="inputDocumentoFormCrear">Número de documento</label>
+								<input id="inputDocumentoFormCrear" type="text" class="form-control-input numero"
+									name="inputDocumentoFormCrear" maxlength="15" placeholder="Número de documento">
+							</div>
+
+							{{!-- INPUT NOMBRES --}}
+							<div class="form-group" id="divInputNombres">
+								<label for="inputNombresFormCrear">Nombres</label>
+								<input id="inputNombresFormCrear" type="text" class="form-control-input textoLetras"
+									name="inputNombresFormCrear" maxlength="30" placeholder="Nombres">
+							</div>
+
+							{{!-- INPUT APELLIDOS --}}
+							<div class="form-group" id="divInputApellidos">
+								<label for="inputApellidosFormCrear">Apellidos</label>
+								<input id="inputApellidoFormCrear" type="text" class="form-control-input textoLetras"
+									name="inputApellidoFormCrear" maxlength="30" placeholder="Apellidos">
+							</div>
+
+							{{!-- SELECT MUNICIPIO --}}
+							<div class="form-group" id="divSelectMunicipio">
+								<label for="selectMunicipioFormCrear">Municipio</label>
+								<select class="form-control form-control-sm selectpicker" id="selectMunicipioFormCrear" data-live-search="true"
+									name="selectMunicipioFormCrear">
+								</select>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+
+							{{!-- INPUT COLEGIO --}}
+							<div class="form-group" id="divInputColegio">
+								<label for="inputColegioFormCrear">Colegio donde estudia o donde se graduó</label>
+								<input id="inputColegioFormCrear" type="text" class="form-control-input textoLetras"
+									name="inputColegioFormCrear" maxlength="30" placeholder="Colegio">
+							</div>
+
+							{{!-- SELECT GRADO --}}
+							<div class="form-group" id="divInputGrado">
+								<label for="inputGradoFormCrear">Grado</label>
+								<select class="form-control form-control-sm selectpicker" id="inputGradoFormCrear" data-live-search="true"
+									name="inputGradoFormCrear">
+									<option selected value="">Seleccione una opción</option>
+									<option value="9">Noveno</option>
+									<option value="10">Decimo</option>
+									<option value="11">Once</option>
+									<option value="N/A">N/A</option>
+								</select>
+							</div>
+
+							{{!-- INPUT TELEFÓNO --}}
+							<div class="form-group" id="divInputTelefono">
+								<label for="inputTelefonoFormCrear">Telefóno</label>
+								<input id="inputTelefonoFormCrear" type="text" class="form-control-input numero"
+									name="inputTelefonoFormCrear" maxlength="10" placeholder="Telefóno">
+							</div>
+
+							{{!-- INPUT CORREO ELECTRÓNICO --}}
+							<div class="form-group" id="divInputEmail">
+								<label for="inputEmailFormCrear">Correo electrónico</label>
+								<input id="inputEmailFormCrear" type="email" class="form-control-input email"
+									name="inputEmailFormCrear" maxlength="30" placeholder="Correo electrónico">
+							</div>
+
+							{{!-- INPUT CONTRASEÑA --}}
+							<div class="form-group" id="divInputContraseña">
+								<label for="inputContraseñaFormCrear">Contraseña (Entre 8 y 20 caracteres)</label>
+								<input id="inputContraseñaFormCrear" type="password" class="form-control-input"
+									name="inputContraseñaFormCrear" maxlength="20" minlength="8"
+									placeholder="Contraseña">
+							</div>
+						</div>
+
+						{{!-- TERMINOS Y CONDICIONES --}}
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<label for="divTerminoCondiciones">ACEPTO LA POLÍTICA DE PRIVACIDAD</label><br>
+							<div class="form-conditions" id="divTerminoCondiciones">
+								<p>
+									Al aceptar el envío del presente formulario, expresamente autorizo de manera
+									voluntaria, previa, informada e inequívoca a la Universidad Católica de Pereira,
+									para el tratamiento de los datos personales recolectados por cualquiera medio, ya
+									sea virtual, personal, telefónico y otros referentes a mi información personal, la
+									cual declaro la he suministrado de forma voluntaria y es completa, confiable, exacta
+									y verídica; de acuerdo a la ley 1581 de 2021 por la cual se dictan disposiciones
+									generales para la protección de datos personales.
+								</p><br>
+								<div class="col row">
+									<div class="col-1">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions"
+											id="inlineRadio1" value="1">
+										<label class="form-check-label" for="inlineRadio1">Sí</label>
+									</div>
+									<div class="col-11">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions"
+											id="inlineRadio2" value="0">
+										<label class="form-check-label" for="inlineRadio2">No</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			{{!-- MODAL FOOTER --}}
+			<div class="modal-footer">
+				<button id="buttonContinuarFormCrear" type="submit" class="btn-enviar">CONTINUAR</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{!-- FILES JS --}}
+<script src="/librerias/detect/detect.js"></script>

@@ -1,0 +1,149 @@
+<link rel="stylesheet" href="assets/css/contactenos.css">
+<link rel="stylesheet" href="assets/css/iconSocial.css">
+
+<div class="main-panel">
+
+	{{!-- BANNER --}}
+	<div style="background-image: url(assets/img/banners/bannerGeneral.png)" class="jumbotron jumbotron-image desktop">
+	</div>
+
+	{{!-- SOCIAL --}}
+	<div class="d-flex flex-row-reverse bd-highlight" style=" background: #ebedf2;">
+		<a href="https://twitter.com/UCatolicaPei" class="colorSocial"></a>
+		<a href="https://www.instagram.com/ucatolicadepereira/" class="colorSocial"></a>
+		<a href="https://www.linkedin.com/school/ucatolicadepereira" class="colorSocial"></a>
+		<a href="https://www.facebook.com/ucatolicadepereira/" class="colorSocial"></a>
+		<a href="https://api.whatsapp.com/send?phone=573013877446" class="colorSocial"></a>
+	</div>
+
+	{{!-- TITLE --}}
+	<div class="content-wrapper">
+		<div class="page-header">
+			<h3 class="page-title">
+				Pruebas
+			</h3>
+		</div>
+
+		{{!-- CONTENT --}}
+		<div class="row">
+			<div class="col-md-12 col-12 stretch-card grid-margin">
+				<div class="card">
+					<div class="card-body">
+
+						{{!-- HEADER CONTENT --}}
+						<div class="row justify-content-between align-items-center">
+							<div class="col-auto">
+								<h4 class="card-title">
+									Tabla Pruebas
+								</h4>
+							</div>
+							{{!-- <div class="col-auto">
+								<button type="button" class="btn btn-outline-info" data-toggle="modal"
+									data-target="#modalCrearProveedor">Nuevo proveedor</button>
+							</div> --}}
+						</div>
+						<br>
+
+						{{!-- BODY CONTENT (TABLE) --}}
+						<div class="table-responsive">
+							<table id="tablaPruebas" class="table table-striped"
+								style="width: 100%; white-space: nowrap;">
+								<thead class="text-success">
+									{{!-- FILTROS --}}
+									<tr>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th>
+											<input type="date" class="buscarColumnaPruebas form-control"
+												placeholder="fecha" data-index="3">
+										</th>
+									</tr>
+									<tr>
+										<th></th>
+										<th>C</th>
+										<th>H</th>
+										<th>A</th>
+										<th>S</th>
+										<th>I</th>
+										<th>D</th>
+										<th>E</th>
+										<th>Fecha Prueba</th>
+									</tr>
+								</thead>
+								<tbody>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalResultadoPdf" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+
+			{{!-- MODAL HEADER --}}
+			<div class="modal-header">
+				<h4 class="modal-title">Resultados Test CHASIDE</h4>
+				<button type="button" class="close" id="btnCerrarModalResultadoPdf">&times;</button>
+			</div>
+
+			{{!-- MODAL BODY --}}
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-lg-8 col-md-8 col-sm-12 col-12" id="divIframeResultadoPdf">
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-12">
+						<div class="row">
+							<div class="col">
+								<h4>Reenviar Resultado</h4>
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="col">
+								<form id="formEmailResultadoPdf">
+									<div class="form-group">
+										<label for="emailDestino">Correo electrónico destino</label>
+										<input type="email" class="form-control" id="emailDestino"
+											placeholder="Correo electrónico" name="emailDestino">
+									</div>
+									<div class="form-group">
+										<label for="asuntoEmail">Asunto</label>
+										<input type="text" class="form-control" id="asuntoEmail" placeholder="Asunto"
+											name="asuntoEmail">
+									</div>
+									<div class="form-group">
+										<label for="mensajeEmail">Asunto</label>
+										<textarea class="form-control" id="mensajeEmail" placeholder="Mensaje..."
+											name="mensajeEmail"></textarea>
+									</div>
+								</form>
+								<div class="row justify-content-center">
+									<div class="col-6">
+										<a style="font-size: 30px;" class="btnVerEmailResultadoPdf" href="#"
+											data-toggle="tooltip" data-placement="bottom"
+											title="Ver correos enviados"><i class="mdi mdi-information-outline"></i></a>
+									</div>
+									<div class="col-6">
+										<button type="button" class="btn btn-sm btn-outline-success btn-fw"
+											id="btnEnviarEmailResultadoPdf">Enviar email</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

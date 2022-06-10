@@ -1,0 +1,242 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+[ BOTÓN INTRO ]*/
+
+.btn-intro {
+    background-color: #0b8b47;
+    font-family: Montserrat-Bold;
+    font-size: 1.2vw;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    width: 50%;
+    height: 4vw;
+    border-radius: 1.2vw;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2vw;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    color: #fff;
+}
+
+.btn-intro:hover {
+    background-color: #0a7a3e;
+    color: #fff;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+[ BOTÓN LOGIN ]*/
+
+.btn-loginA {
+    background-color: #f9ec37;
+    color: #000;
+}
+
+.btn-loginA:hover {
+    background-color: #dacf30;
+    color: #000;
+}
+
+.btn-loginV {
+    background-color: #0b8b47;
+    font-family: Montserrat-Bold;
+    font-size: 1.2vw;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    width: 58%;
+    height: 4vw;
+    border-radius: 1.2vw;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2vw;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    color: #fff;
+}
+
+.btn-loginV:hover {
+    background-color: #0a7a3e;
+    color: #fff;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+[ BOTÓN MODAL ]*/
+
+.btn-enviar {
+    background-color: #0b8b47;
+    font-family: Montserrat-Bold;
+    font-size: 0.8vw;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    width: 16.7vw;
+    height: 3.2vw;
+    border-radius: 0.8vw;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2vw;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    color: #fff;
+}
+
+.btn-enviar:hover {
+    background-color: #0a7a3e;
+    color: #fff;
+}
+
+.btn-cerrar {
+    background-color: #ccd1d1;
+    font-family: Montserrat-Bold;
+    font-size: 10px;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    width: 30%;
+    height: 40px;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    color: #fff;
+}
+
+.btn-cerrar:hover {
+    background-color: #839192;
+    color: #fff;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+[ BOTÓN DETALLE ]*/
+
+.btn-detalle {
+    background-color: #0b8b47;
+    font-family: Montserrat-Bold;
+    font-size: 10px;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    color: #fff;
+}
+
+.btn-detalle:hover {
+    background-color: #0a7a3e;
+    color: #fff;
+}
+
+.btn-oferta {
+    background-color: #0b8b47;
+    font-family: Montserrat-Bold;
+    font-size: 10px;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    width: 30%;
+    height: 40px;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    position: absolute;
+    right: 35px;
+    bottom: 50px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    color: #fff;
+}
+
+.btn-detalle:hover {
+    background-color: #0a7a3e;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .btn-intro {
+        font-size: 15px;
+        height: 50px;
+        border-radius: 15px;
+        padding: 0 25px;
+    }
+
+    .btn-loginV {
+        font-size: 15px;
+        height: 50px;
+        border-radius: 15px;
+        padding: 0 25px;
+    }
+
+    .btn-enviar {
+        font-size: 10px;
+        width: 210px;
+        height: 40px;
+        border-radius: 10px;
+        padding: 0 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-oferta {
+        font-size: 8px;
+        right: 20px;
+        bottom: 40px;
+    }
+}

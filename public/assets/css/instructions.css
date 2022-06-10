@@ -1,0 +1,55 @@
+.card-intro {
+    border: 10px solid #d83135 !important;
+}
+
+.w-65-intru {
+    width: 80% !important;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+[ RESPONSIVE ]*/
+
+@media (max-width: 1114px) {
+    .mt-5 {
+        margin-top: 2rem !important;
+    }
+
+    .w-25 {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .mt-5 {
+        margin-top: 3rem !important;
+    }
+}
+
+@media (max-width: 950px) {
+    .mt-5 {
+        margin-top: 2rem !important;
+    }
+}
+
+@media (max-width: 839px) {
+    .mt-5 {
+        margin-top: 1.5rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .w-65-intru {
+        width: 80% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    html,
+    body {
+        overflow: visible;
+    }
+
+    .w-65-intru {
+        width: 95% !important;
+    }
+}

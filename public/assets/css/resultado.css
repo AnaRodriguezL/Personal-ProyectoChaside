@@ -1,0 +1,19 @@
+.card-border {
+    border: 1px solid #0b8b47 !important;
+}
+
+.card-margin {
+    margin: -1.5rem !important;
+}
+
+.card-title {
+    background-color: #0b8b47;
+    margin-bottom: 0rem !important;
+    padding: 0.5rem 0rem;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.card-footer {
+    border-top: 1px solid #0b8b47 !important;
+    background-color: #0b8b47 !important;
+}

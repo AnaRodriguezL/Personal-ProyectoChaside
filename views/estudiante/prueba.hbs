@@ -1,0 +1,206 @@
+{{!-- FILES CSS --}}
+<link rel="stylesheet" href="assets/css/instructions.css">
+<link rel="stylesheet" href="assets/css/buttons.css">
+<link rel="stylesheet" href="assets/css/intro.css">
+<link rel="stylesheet" href="assets/css/login.css">
+<link rel="stylesheet" href="assets/css/modalPreguntas.css">
+<link rel="stylesheet" href="assets/css/contactenos.css">
+<link rel="stylesheet" href="assets/css/iconSocial.css">
+
+<div class="main-panel">
+
+	{{!-- BANNER --}}
+	<div style="background-image: url(assets/img/banners/bannerGeneral.png)" class="jumbotron jumbotron-image desktop">
+	</div>
+
+	{{!-- SOCIAL --}}
+	<div class="d-flex flex-row-reverse bd-highlight" style=" background: #ebedf2;">
+		<a href="https://twitter.com/UCatolicaPei" class="colorSocial"></a>
+		<a href="https://www.instagram.com/ucatolicadepereira/" class="colorSocial"></a>
+		<a href="https://www.linkedin.com/school/ucatolicadepereira" class="colorSocial"></a>
+		<a href="https://www.facebook.com/ucatolicadepereira/" class="colorSocial"></a>
+		<a href="https://api.whatsapp.com/send?phone=573013877446" class="colorSocial"></a>
+	</div>
+	<div class="text-center p-3 content-wrapper">
+
+		{{!-- CAJA DE INFORMACIÓN --}}
+		<div class="card-intro p-5 w-65-intru">
+			<div class="d-flex">
+				<div class="w-100">
+					<h4 class="mb-0 mt-0 text-center">Instrucciones</h4>
+					<p class="mt-4 text-justify">
+						A continuación encontrara una serie de preguntas que usted deberá contestar con un
+						<b>sí (<i class="fas fa-thumbs-up"></i>)</b>
+						o con un
+						<b>no (<i class="fas fa-thumbs-down"></i>).</b>
+						Se recomienda que lea atentamente cada pregunta y conteste lo más honesto posible, aquí no hay
+						respuestas correctas o incorrectas. <br>
+						Para continuar con la siguiente pregunta primero deberá contestar la pregunta actual para que
+						pueda continuar, también prodrá regresar a la pregunta anterior si desea cambiar su respuesta.
+						Una vez conteste todas las preguntas obtendrá el resultado en la misma aplicación donde se le
+						entregara un perfil de intereses y aptitudes, además, las carreras que se ajusten a estas y con
+						está información que carreras se encuentran disponibles actualmente en la Universidad Católica
+						de Pereira y su respectiva información.
+					</p>
+
+					{{!-- BOTÓN INICIAR --}}
+					<div class="mt-4 d-flex flex-row justify-content-center">
+						<button class="btn btn-intro" id="iniciarPrueba">INICIAR</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{!-- MODAL PREGUNTAS --}}
+<div class="modal fade overfloAuto" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered " role="document">
+		<div class="modal-content">
+
+			{{!-- MODAL HEADER --}}
+			<div class="modal-header">
+				<h1 class="modal-title col text-center"><img class="logo-question mr-2"
+						src="assets/img/logoUcp/logoVerde.png"> Test Chaside</h1>
+				<button id="cerrarPrueba" type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			{{!-- MODAL BODY --}}
+			<div class="modal-body">
+				<div class="progress">
+					<div id="barraProgreso" class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+						role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+					</div>
+				</div>
+				<h4 id="pregunta" class="text-center mt-4 mb-3"></h4>
+				<img id="imagenPregunta" class="img-question" src="">
+				<div class="icon-list">
+					<div class="icon-item">
+						<a id="negacion" href="#" class="icon-link"><i class="mdi mdi-thumb-down"></i></a>
+					</div>
+					<div class="icon-item">
+						<a id="afirmacion" href="#" class="icon-link"><i class="mdi mdi-thumb-up"></i></a>
+					</div>
+				</div>
+			</div>
+
+			{{!-- MODAL FOOTER --}}
+			<div class="modal-footer">
+				<div class="footer-question">
+					<button id="btnAnteriorQuestion" type="button" class="btn-footer"
+						style="display: none;">ANTERIOR</button>
+					<button type="button" id="btnSiguienteQuestion" class="btn-footer"
+						style="display: none;">SIGUIENTE</button>
+					<button type="button" id="btnFinalizarQuestion" class="btn-footer"
+						style="display: none;">FINALIZAR</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{!-- MODAL EDITAR DATOS--}}
+<div class="modal fade" id="modalEditarDatos" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+
+			{{!-- MODAL HEADER --}}
+			<div class="modal-header">
+				<h4 class="modal-title">Confirmar Datos</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			{{!-- MODAL BODY --}}
+			<div class="modal-body">
+				<form id="formEditarDatos" class="mt-2">
+					<div class="row">
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+
+							{{!-- SELECT TIPO DE DOCUMENTO --}}
+							<div class="form-group" id="divSelectTipoDocumento">
+								<label for="selectTipoDocumentoFormEditar">Tipo de documento</label>
+								<select class="form-control form-control-sm selectpicker" data-live-search="true"
+									id="selectTipoDocumentoFormEditar" name="selectTipoDocumentoFormEditar">
+									<option value="">Seleccione una opción</option>
+								</select>
+							</div>
+
+							{{!-- INPUT NÚMERO DE DOCUMENTO --}}
+							<div class="form-group" id="divInputDocumento">
+								<label for="inputDocumentoFormEditar">N° documento</label>
+								<input type="text" class="form-control numero" id="inputDocumentoFormEditar"
+									placeholder="Número de documento" name="inputDocumentoFormEditar">
+							</div>
+
+							{{!-- INPUT NOMBRES --}}
+							<div class="form-group" id="divInputNombres">
+								<label for="inputNombreFormEditar">Nombres</label>
+								<input type="text" class="form-control textoLetras" id="inputNombreFormEditar"
+									placeholder="Nombres" name="inputNombreFormEditar">
+							</div>
+
+							{{!-- INPUT APELLIDOS --}}
+							<div class="form-group" id="divInputApellidos">
+								<label for="inputApellidoFormEditar">Apellidos</label>
+								<input type="text" class="form-control textoLetras" id="inputApellidoFormEditar"
+									placeholder="Apellidos" name="inputApellidoFormEditar">
+							</div>
+
+							{{!-- SELECT MUNICIPIO --}}
+							<div class="form-group" id="divSelectMunicipio">
+								<label for="selectMunicipioFormEditar">Municipio</label>
+								<select class="form-control form-control-sm selectpicker" data-live-search="true"
+									id="selectMunicipioFormEditar" name="selectMunicipioFormEditar">
+									<option value="">Seleccione una opción</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+
+							{{!-- INPUT COLEGIO --}}
+							<div class="form-group" id="divInputColegio">
+								<label for="inputColegioFormEditar">Colegio</label>
+								<input type="text" class="form-control" id="inputColegioFormEditar"
+									data-live-search="true" placeholder="Colegio" name="inputColegioFormEditar">
+							</div>
+
+							{{!-- SELECT GRADO --}}
+							<div class="form-group" id="divSelectGrado">
+								<label for="selectGradoFormEditar">Grado</label>
+								<select class="form-control form-control-sm selectpicker" data-live-search="true"
+									id="selectGradoFormEditar" name="selectGradoFormEditar">
+									<option selected value="">Seleccione una opción</option>
+									<option value="9">Noveno</option>
+									<option value="10">Decimo</option>
+									<option value="11">Once</option>
+									<option value="N/A">N/A</option>
+								</select>
+							</div>
+
+							{{!-- INPUT TELEFONO --}}
+							<div class="form-group" id="divInputTelefono">
+								<label for="inputTelefonoFormEditar">Teléfono</label>
+								<input type="text" class="form-control numero" id="inputTelefonoFormEditar"
+									placeholder="Telefono" name="inputTelefonoFormEditar">
+							</div>
+
+							{{!-- INPUT EMAIL --}}
+							<div class="form-group" id="divInputEmail">
+								<label for="inputEmailFormEditar">Email</label>
+								<input type="email" class="form-control email" id="inputEmailFormEditar"
+									placeholder="Correo electrónico" name="inputEmailFormEditar">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			{{!-- MODAL FOOTER --}}
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-success btn-fw" id="btnEditarDatos">Continuar</button>
+			</div>
+		</div>
+	</div>
+</div>

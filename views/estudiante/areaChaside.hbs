@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="assets/css/buttons.css">
+<link rel="stylesheet" href="assets/css/carreras.css">
+<link rel="stylesheet" href="assets/css/contactenos.css">
+<link rel="stylesheet" href="assets/css/iconSocial.css">
+
+<div class="main-panel">
+
+	{{!-- BANNER --}}
+	<div style="background-image: url(assets/img/banners/bannerGeneral.png)" class="jumbotron jumbotron-image desktop">
+	</div>
+
+	{{!-- SOCIAL --}}
+	<div class="d-flex flex-row-reverse bd-highlight" style=" background: #ebedf2;">
+		<a href="https://twitter.com/UCatolicaPei" class="colorSocial"></a>
+		<a href="https://www.instagram.com/ucatolicadepereira/" class="colorSocial"></a>
+		<a href="https://www.linkedin.com/school/ucatolicadepereira" class="colorSocial"></a>
+		<a href="https://www.facebook.com/ucatolicadepereira/" class="colorSocial"></a>
+		<a href="https://api.whatsapp.com/send?phone=573013877446" class="colorSocial"></a>
+	</div>
+
+	{{!-- TITLE --}}
+	<div class="content-wrapper">
+
+		{{!-- CONTENT --}}
+		<div class="row">
+
+			{{!-- VIDEO ABOUT CARREER --}}
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="videoWrapper">
+					<img id="imagenArea" src="" class="card-img-top">
+				</div>
+				<div class="card-footer" style="background-color: transparent !important; border: none !important;">
+					<button class="btn-detalle btnVerCarreraArea">VER CARRERAS</button>
+				</div>
+			</div>
+
+			{{!-- CARDS WITH INFORMATION --}}
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="card" style="border: none !important; border-radius: 25px;">
+					<div class="card-body">
+
+						<h4 class="card-title text-center">
+							Detalle
+						</h4>
+
+						<p class="card-text" id="textoArea1">
+
+						</p>
+						<p class="card-text" id="textoArea2">
+
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+{{!-- MODAL PROMOCIÓN OFERTA ACADÉMICA--}}
+<div class="modal fade custom-modal" id="promocionModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-lg promo" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<img src="assets/img/contactenos/contactenosGrande.png" class="desktop" style="width: 100%">
+				<img src="assets/img/contactenos/contactenosPequeño.png" class="mobile" style="width: 100%">
+				<a id="btnVerOferta" href="/facultadesRoute" class="btn btn-oferta btn-fw">VER OFERTA
+					ACADÉMICA</a>
+			</div>
+		</div>
+	</div>
+</div>

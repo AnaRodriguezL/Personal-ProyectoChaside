@@ -1,0 +1,120 @@
+<link rel="stylesheet" href="assets/css/contactenos.css">
+<link rel="stylesheet" href="assets/css/iconSocial.css">
+
+<div class="main-panel">
+
+    {{!-- BANNER --}}
+    <div style="background-image: url(assets/img/banners/bannerGeneral.png)" class="jumbotron jumbotron-image desktop">
+    </div>
+
+    {{!-- SOCIAL --}}
+    <div class="d-flex flex-row-reverse bd-highlight" style=" background: #ebedf2;">
+        <a href="https://twitter.com/UCatolicaPei" class="colorSocial"></a>
+        <a href="https://www.instagram.com/ucatolicadepereira/" class="colorSocial"></a>
+        <a href="https://www.linkedin.com/school/ucatolicadepereira" class="colorSocial"></a>
+        <a href="https://www.facebook.com/ucatolicadepereira/" class="colorSocial"></a>
+        <a href="https://api.whatsapp.com/send?phone=573013877446" class="colorSocial"></a>
+    </div>
+
+    {{!-- TITLE --}}
+    <div class="content-wrapper">
+
+        <div class="page-header">
+            <h3 class="page-title">
+                Estudiantes
+            </h3>
+        </div>
+
+        {{!-- CONTENT --}}
+        <div class="row">
+            <div class="col-md-12 col-12 stretch-card grid-margin">
+                <div class="card">
+                    <div class="card-body">
+
+                        {{!-- HEADER CONTENT --}}
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-auto">
+                                <h4 class="card-title">
+                                    Tabla Estudiantes
+                                </h4>
+                            </div>
+                            <div class="col-auto">
+                                {{!<button id="btnExcel" type="button" class="btn btn-outline-info">Excel</button>--}}
+                                <a id="btnExcel" href="/estudiantesRoute/excel"
+                                    class="btn btn-outline-success">Excel</a>
+                            </div>
+                        </div>
+                        <br>
+
+                        {{!-- BODY CONTENT (TABLE) --}}
+                        <div class="table-responsive">
+                            <table id="tablaEstudiantes" class="table table-striped"
+                                style="width: 100%; white-space: nowrap;">
+                                <thead class="text-success">
+                                    {{!-- FILTROS --}}
+                                    <tr>
+                                        <th>
+                                            <input type="text" class="buscarColumnaEstudiante form-control"
+                                                placeholder="Nombre" data-index="0">
+                                        </th>
+                                        <th>
+                                            <input type="text" class="buscarColumnaEstudiante form-control"
+                                                placeholder="Documento" data-index="1">
+                                        </th>
+                                        <th>
+                                            <input type="text" class="buscarColumnaEstudiante form-control"
+                                                placeholder="Municipio" data-index="2">
+                                        </th>
+                                        <th>
+                                            <input type="text" class="buscarColumnaEstudiante form-control"
+                                                placeholder="Colegio" data-index="3">
+                                        </th>
+                                        <th>
+                                            <input type="text" class="buscarColumnaEstudiante form-control"
+                                                placeholder="Grado" data-index="4">
+                                        </th>
+                                        <th>
+                                            <input type="text" class="buscarColumnaEstudiante form-control"
+                                                placeholder="Teléfono" data-index="5">
+                                        </th>
+                                        <th>
+                                            <input type="text" class="buscarColumnaEstudiante form-control"
+                                                placeholder="Email" data-index="6">
+                                        </th>
+                                        <th>
+                                            <input type="text" class="buscarColumnaEstudiante form-control"
+                                                placeholder="TyC" data-index="7">
+                                        </th>
+                                        <th>
+                                            <input type="date" class="buscarColumnaEstudiante form-control"
+                                                placeholder="Fecha" data-index="8">
+                                        </th>
+                                        <th>
+                                            <input type="date" class="buscarColumnaEstudiante form-control"
+                                                placeholder="Fecha" data-index="9">
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Documento</th>
+                                        <th>Municipio</th>
+                                        <th>Colegio</th>
+                                        <th>Grado</th>
+                                        <th>Teléfono</th>
+                                        <th>Email</th>
+                                        <th>TyC</th>
+                                        <th>Fecha Ultima Prueba</th>
+                                        <th>Fecha Actualización</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

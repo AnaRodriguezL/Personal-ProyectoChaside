@@ -1,0 +1,31 @@
+{
+	"scripts": {
+		"start": "node app",
+		"dev": "node app"
+	},
+	"dependencies": {
+		"@mdi/font": "^5.9.55",
+		"bootstrap-select": "^1.13.18",
+		"convert-excel-to-json": "^1.6.1",
+		"dotenv": "^8.2.0",
+		"emailjs": "^2.2.0",
+		"excel4node": "^1.7.2",
+		"express": "^4.17.1",
+		"express-handlebars": "^3.1.0",
+		"express-session": "^1.16.2",
+		"jquery": "^3.6.0",
+		"md5": "^2.2.1",
+		"multiparty": "^4.2.1",
+		"mysql": "^2.17.1",
+		"path": "^0.12.7",
+		"pdfkit": "^0.10.0",
+		"pdfmake": "^0.1.58",
+		"select-picker": "^0.3.2",
+		"select2": "^4.1.0-rc.0"
+	},
+	"devDependencies": {
+		"@types/bootstrap": "^5.0.17",
+		"@types/jquery": "^3.5.6",
+		"@types/node": "^16.3.2"
+	}
+}
